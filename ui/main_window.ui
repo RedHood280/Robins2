@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QStackedWidget" name="stackedMain">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>400</height>
+       </size>
+      </property>
+      <widget class="QWidget" name="startPage">
+       <property name="styleSheet">
+        <string notr="true">QWidget#startPage {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #0a0a0a,
+        stop:0.3 #1a0a0a,
+        stop:0.6 #0a0a1a,
+        stop:1 #000000);
+}</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_start">
+        <item>
+         <spacer name="verticalSpacer_top">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="gameLogo">
+          <property name="text">
+           <string notr="true">ROBINS</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    font-size: 86px; 
+    font-weight: bold; 
+    color: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #DC143C,
+        stop:0.5 #FF1744,
+        stop:1 #DC143C);
+    padding: 20px;
+    letter-spacing: 8px;
+    
+}</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="gameSubtitle">
+          <property name="text">
+           <string>⚔ JUEGO DE AVENTURA EN TEXTO ⚔</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    font-size: 16px; 
+    color: #BBB; 
+    padding: 10px;
+    letter-spacing: 4px;
+    font-weight: 500;
+}</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_mid">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>60</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item alignment="Qt::AlignHCenter">
+         <widget class="QWidget" name="startButtonsContainer">
+          <property name="minimumSize">
+           <size>
+            <width>400</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>400</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_startButtons">
+           <item>
+            <widget class="QPushButton" name="newGameButton">
+             <property name="minimumHeight">
+              <number>65</number>
+             </property>
+             <property name="text">
+              <string>▶ NUEVA PARTIDA</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #DC143C,
+        stop:0.5 #FF1744,
+        stop:1 #DC143C);
+    color: white;
+    border: 3px solid #FF1744;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #FF1744,
+        stop:0.5 #FF4569,
+        stop:1 #FF1744);
+    border: 3px solid white;
+    font-size: 21px;
+}
+QPushButton:pressed {
+    background-color: #8B0000;
+}</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="loadGameButton">
+             <property name="minimumHeight">
+              <number>65</number>
+             </property>
+             <property name="text">
+              <string>💾 CARGAR PARTIDA</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #8B0000,
+        stop:0.5 #A52A2A,
+        stop:1 #8B0000);
+    color: white;
+    border: 3px solid #A52A2A;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #A52A2A,
+        stop:0.5 #DC143C,
+        stop:1 #A52A2A);
+    border: 3px solid white;
+    font-size: 21px;
+}
+QPushButton:pressed {
+    background-color: #5A0000;
+}</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="creditsButtonStart">
+             <property name="minimumHeight">
+              <number>65</number>
+             </property>
+             <property name="text">
+              <string>✦ CREDITOS</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #5A0000,
+        stop:0.5 #8B0000,
+        stop:1 #5A0000);
+    color: white;
+    border: 3px solid #6A0000;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #8B0000,
+        stop:0.5 #A52A2A,
+        stop:1 #8B0000);
+    border: 3px solid #CCC;
+    font-size: 21px;
+}
+QPushButton:pressed {
+    background-color: #3A0000;
+}</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="settingsButton">
+             <property name="minimumHeight">
+              <number>65</number>
+             </property>
+             <property name="text">
+              <string>⚙ CONFIGURACION</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #1a1a1a,
+        stop:0.5 #2a2a2a,
+        stop:1 #1a1a1a);
+    color: white;
+    border: 3px solid #444;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #2a2a2a,
+        stop:0.5 #3a3a3a,
+        stop:1 #2a2a2a);
+    border: 3px solid #888;
+    font-size: 21px;
+}
+QPushButton:pressed {
+    background-color: #0a0a0a;
+}</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="exitButtonStart">
+             <property name="minimumHeight">
+              <number>65</number>
+             </property>
+             <property name="text">
+              <string>✕ SALIR</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #1a1a1a,
+        stop:0.5 #2a2a2a,
+        stop:1 #1a1a1a);
+    color: #CCC;
+    border: 3px solid #333;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #3a0000,
+        stop:0.5 #5a0000,
+        stop:1 #3a0000);
+    border: 3px solid #8B0000;
+    color: white;
+    font-size: 21px;
+}
+QPushButton:pressed {
+    background-color: #000000;
+}</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_bottom">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="menuPage">
+       <layout class="QVBoxLayout" name="verticalLayout_menu">
+        <property name="spacing">
+         <number>30</number>
+        </property>
+        <property name="leftMargin">
+         <number>40</number>
+        </property>
+        <property name="topMargin">
+         <number>40</number>
+        </property>
+        <property name="rightMargin">
+         <number>40</number>
+        </property>
+        <property name="bottomMargin">
+         <number>40</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="menuTitle">
+          <property name="text">
+           <string>SELECCIONA TU ROBIN</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font-size: 32px; 
+font-weight: bold; 
+color: #DC143C; 
+padding: 15px;
+letter-spacing: 3px;
+text-</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="cardsContainer">
+          <layout class="QGridLayout" name="gridLayout_cards">
+           <property name="horizontalSpacing">
+            <number>40</number>
+           </property>
+           <property name="verticalSpacing">
+            <number>40</number>
+           </property>
+           <item row="0" column="0">
+            <layout class="QVBoxLayout" name="verticalLayout_jason">
+             <item>
+              <widget class="QLabel" name="imageJason">
+               <property name="minimumSize">
+                <size>
+                 <width>250</width>
+                 <height>250</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>250</width>
+                 <height>250</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="scaledContents">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="cardJason">
+               <property name="minimumSize">
+                <size>
+                 <width>250</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>250</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="text"><string>Jason Todd</string></property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="0" column="1">
+            <layout class="QVBoxLayout" name="verticalLayout_dick">
+             <item>
+              <widget class="QLabel" name="imageDick">
+               <property name="minimumSize">
+                <size>
+                 <width>250</width>
+                 <height>250</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>250</width>
+                 <height>250</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="scaledContents">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="cardDick">
+               <property name="minimumSize">
+                <size>
+                 <width>250</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>250</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="text"><string>Dick Grayson</string></property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="1" column="0">
+            <layout class="QVBoxLayout" name="verticalLayout_tim">
+             <item>
+              <widget class="QLabel" name="imageTim">
+               <property name="minimumSize">
+                <size>
+                 <width>250</width>
+                 <height>250</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>250</width>
+                 <height>250</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="scaledContents">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="cardTim">
+               <property name="minimumSize">
+                <size>
+                 <width>250</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>250</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="text"><string>Tim Drake</string></property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="1" column="1">
+            <layout class="QVBoxLayout" name="verticalLayout_damian">
+             <item>
+              <widget class="QLabel" name="imageDamian">
+               <property name="minimumSize">
+                <size>
+                 <width>250</width>
+                 <height>250</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>250</width>
+                 <height>250</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="scaledContents">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="cardDamian">
+               <property name="minimumSize">
+                <size>
+                 <width>250</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>250</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="text"><string>Damian Wayne</string></property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="gamePage">
+       <layout class="QHBoxLayout" name="horizontalLayout_main">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QWidget" name="sidePanel">
+          <property name="minimumSize">
+           <size>
+            <width>180</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>180</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QWidget#sidePanel {
+    background-color: #1a1a1a;
+    border-right: 1px solid #333;
+}</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_side">
+           <property name="spacing">
+            <number>8</number>
+           </property>
+           <property name="leftMargin">
+            <number>10</number>
+           </property>
+           <property name="topMargin">
+            <number>15</number>
+           </property>
+           <property name="rightMargin">
+            <number>10</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="statsTitle">
+             <property name="text">
+              <string>ESTADISTICAS</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font-size: 11px; font-weight: bold; color: #666; padding: 3px; letter-spacing: 1px;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QProgressBar" name="healthBar">
+             <property name="value">
+              <number>80</number>
+             </property>
+             <property name="maximumHeight">
+              <number>18</number>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QProgressBar {
+    border: 1px solid #444;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 9px;
+    background-color: #2a2a2a;
+    color: white;
+}
+QProgressBar::chunk {
+    background-color: #DC143C;
+}</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QProgressBar" name="repBar">
+             <property name="value">
+              <number>50</number>
+             </property>
+             <property name="maximumHeight">
+              <number>18</number>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QProgressBar {
+    border: 1px solid #444;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 9px;
+    background-color: #2a2a2a;
+    color: white;
+}
+QProgressBar::chunk {
+    background-color: #1E90FF;
+}</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QProgressBar" name="resBar">
+             <property name="value">
+              <number>30</number>
+             </property>
+             <property name="maximumHeight">
+              <number>18</number>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QProgressBar {
+    border: 1px solid #444;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 9px;
+    background-color: #2a2a2a;
+    color: white;
+}
+QProgressBar::chunk {
+    background-color: #FFD700;
+}</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_stats">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="centerPanel">
+          <property name="styleSheet">
+           <string notr="true">QWidget#centerPanel {
+    background-color: #1a1a1a;
+}</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_center">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="sceneLabel">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>300</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>400</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>IMAGEN ESCENA</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLabel {
+    background-color: #1a1a1a;
+}</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTextEdit" name="descText">
+             <property name="minimumHeight">
+              <number>80</number>
+             </property>
+             <property name="maximumHeight">
+              <number>100</number>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+             <property name="placeholderText">
+              <string>La historia se desarrolla aqui...</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QTextEdit {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 rgba(26, 26, 26, 0.95),
+        stop:1 rgba(32, 32, 32, 0.98));
+    border: none;
+    border-top: 2px solid #222;
+    color: white;
+    font-size: 14px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.4;
+    padding: 10px 18px;
+}</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="optionsContainer">
+             <property name="minimumHeight">
+              <number>200</number>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QWidget#optionsContainer {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #2a2a2a,
+        stop:1 #1a1a1a);
+    border-top: 3px solid #DC143C;
+    padding: 15px;
+}</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_optionsContainer">
+              <property name="spacing">
+               <number>8</number>
+              </property>
+              <property name="leftMargin">
+               <number>20</number>
+              </property>
+              <property name="topMargin">
+               <number>12</number>
+              </property>
+              <property name="rightMargin">
+               <number>20</number>
+              </property>
+              <property name="bottomMargin">
+               <number>12</number>
+              </property>
+              <item>
+               <widget class="QWidget" name="optionsWidget">
+                <layout class="QVBoxLayout" name="verticalLayout_options">
+                 <property name="spacing">
+                  <number>8</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="bottomBar">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>60</height>
+       </size>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_bottom">
+       <item>
+        <spacer name="horizontalSpacer_bottom">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="saveButton">
+         <property name="minimumSize">
+          <size>
+           <width>120</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #8B0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #A52A2A;
+}</string>
+         </property>
+         <property name="text">
+          <string>Guardar Partida</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="menuButton">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #1E3A5F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #2C5282;
+}</string>
+         </property>
+         <property name="text">
+          <string>Menu</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_bottom2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

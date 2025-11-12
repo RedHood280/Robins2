@@ -1,0 +1,35 @@
+{
+  "nombre": "Jason Todd",
+  "salud": 90,
+  "reputacion": 90,
+  "recursos": 6,
+  "inventario": [],
+  "decisiones": [
+    {
+      "nodo": "jason_normal_inicio",
+      "eleccion": "Prometer cambiar"
+    },
+    {
+      "nodo": "jason_normal_promesa",
+      "eleccion": "Contenerte y arrestarlo"
+    },
+    {
+      "nodo": "jason_normal_contencion",
+      "eleccion": "Continuar mejorando"
+    },
+    {
+      "nodo": "jason_normal_progreso",
+      "eleccion": "Investigar el mensaje juntos"
+    },
+    {
+      "nodo": "jason_normal_mensaje_conjunto",
+  "eleccion": "Viajar a Etiopia con Batman"
+    },
+    {
+      "nodo": "jason_normal_preparacion_viaje",
+  "eleccion": "Llegar a Etiopia preparados"
+    }
+  ],
+  "nodo_actual": "jason_normal_etiopia_equipo",
+  "dificultad": "Normal"
+}
